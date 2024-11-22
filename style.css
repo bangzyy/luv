@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background 0.5s;
+}
+
+button:hover {
+    background: #ff3b2f;
+}
+
+.hidden {
+    display: none;
+}
+
+#heartContainer {
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background: red;
+    margin: 0 auto;
+    transform: rotate(-45deg);
+    animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 50px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.1) rotate(-45deg); }
+}
+.click-heart-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ff6f61;
+    animation: fadeIn 2s ease-in-out;
+}
+.moment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.moment-container h2 {
+    margin-bottom: 20px;
+}
+
+.moment-photo {
+    width: 350px; /* Ukuran kotak */
+    height: 350px; /* Ukuran kotak */
+    object-fit: cover; /* Memastikan gambar tetap proporsional dalam kotak */
+    border-radius: 10px; /* Sudut sedikit melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.heart-button {
+    position: relative;
+    width: 50px;
+    height: 45px;
+    background-color: #ff6f61;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transform: rotate(-45deg);
+    margin-top: 20px;
+}
+
+.heart-button::before,
+.heart-button::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+}
+
+.heart-button::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart-button::after {
+    top: 0;
+    left: 25px;
+}
+
+.heart-button:hover {
+    background-color: #ff3b2f;
+}
+

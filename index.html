@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart For Dinda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <pre>
+            <h1>adzy bikin ini buat dinda ygy hehe,maaf ya klo jelek <br/>but adzy nyempetin bkin ini buat dinda, Klik tombolnya ya din ❤️❤️❤️. 
+            </h1>
+        </pre>
+        
+        <button id="revealButton">For You</button>
+        <div id="heartContainer" class="hidden">
+            <div class="heart" id="clickHeart"></div>
+            <p>I Love You, Din <br/> I know you're traumatized by your ex,<br/> but Adzy just wants to tell you,<br/> I’m not your ex.</p>
+            <p class="click-heart-message hidden">Click the heart to see our special moments ❤️</p>
+        </div>
+    </div>
+</body>
+<script>
+   document.getElementById('revealButton').addEventListener('click', function(){
+       const heartContainer = document.getElementById('heartContainer');
+       heartContainer.classList.toggle('hidden');
+       document.body.classList.toggle('dark-mode');
+       document.querySelector('.click-heart-message').classList.toggle('hidden');
+    });
+
+   document.getElementById('clickHeart').addEventListener('click', function(){
+       window.location.href = 'our_moments.html';
+    });
+</script>
+</html>
